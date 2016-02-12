@@ -1,0 +1,26 @@
+{
+  "author": "Arhitector",
+  "name": "css_patterns",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Arhitector",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arhitector"
+  },
+  "scripts": {
+    "start": "gulp",
+    "postinstall": "npm start"
+  },
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-autowatch": "^1.0.2",
+    "gulp-jade": "^0.7.0",
+    "gulp-jade-inheritance": "^0.5.0",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0"
+  }
+}
