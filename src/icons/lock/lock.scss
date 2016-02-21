@@ -1,0 +1,59 @@
+$lock__color: $icon-color;
+$lock__color2: #fff;
+$lock__size: $icon-size;
+.u-lock {
+  @extend %h-item-icon;
+  font-size: $lock__size;
+  color: $lock__color;
+  &::before, &::after {
+    content: "";
+    display: block;
+  }
+  &:before {
+    margin-top: 0.6em;
+    width: 1.2em;
+    height: 0.8em;
+    background-color: currentColor;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0.8em;
+    left: 0.2em;
+    right: 0.2em;
+    height: 0.4em;
+    border-left: 0.2em solid currentColor;
+    border-top: 0.2em solid currentColor;
+    border-right: 0.2em solid currentColor;
+    border-radius: 50% 50% 0 0;
+    transform-origin: 0.7em 0;
+    transform: rotateY(0deg);
+    transition: transform $transition;
+  }
+  &__inner {
+    background-color: $lock__color2;
+    position: absolute;
+    left: 0.45em;
+    bottom: 0.3em;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    &::after {
+      content: "";
+      display: block;
+      width: 0.15em;
+      height: 0.35em;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: $lock__color2;
+    }
+  }
+  &.is-unlock {
+    &::after {
+      transform: rotateY(180deg);
+      transition: transform $transition;
+    }
+  }
+}

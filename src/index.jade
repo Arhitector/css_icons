@@ -1,0 +1,54 @@
+html
+    head
+        title Css pattrens
+        link(rel="stylesheet" href="./all.css")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    body
+        include icons/comment/comment
+        |comment
+        br
+        include icons/pie/pie
+        |pie
+        br
+        include icons/home/home
+        |home
+        br
+
+        include icons/place/place
+        |place
+        br
+        include icons/user/user
+        |user
+        br
+        include icons/clock/clock
+        |clock
+        h4 calendar
+        include icons/calendar/calendar
+        h2 Animated
+        h4 action
+        include icons/action/action
+        h4 heart
+        include icons/heart/heart
+        h4 play
+        include icons/play/play
+        h4 lock
+        include icons/lock/lock
+        h4 burger
+        include icons/burger/burger
+        h4 phone
+        include icons/phone/phone
+        h4 E-mail
+        include icons/mail/mail
+        h4 search
+        include icons/search/search
+        h4 arrows
+        include icons/arrows/arrows
+        h4 loader
+        include icons/loader/loader
+        script.
+            $('div').click(function () {
+                var adClass = $(this).data('over');
+                if (adClass){
+                    $(this).toggleClass(adClass);
+                }
+            });

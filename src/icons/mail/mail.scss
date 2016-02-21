@@ -1,0 +1,59 @@
+$mail__size: $icon-size;
+$mail__color: $icon-color;
+.u-mail {
+  @extend %h-item-icon;
+  color: $mail__color;
+  font-size: $mail__size;
+  &::before, &::after {
+    content: "";
+  }
+  &:before {
+    width: 0.4em;
+    height: 0;
+    display: block;
+    border-left: 0.8em solid CurrentColor;
+    border-right: 0.8em solid CurrentColor;
+    border-top: 0.6em solid transparent;
+    border-bottom: 0.6em solid transparent;
+    margin: 0.05em 0;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0.05em;
+    right: 0.05em;
+    border-top: 0.7em solid CurrentColor;
+    border-left: 0.95em solid transparent;
+    border-right: 0.95em solid transparent;
+    transform: rotateX(0deg);
+    transform-origin: 50% 0;
+    transition: transform $transition;
+  }
+  &__inner {
+    position: absolute;
+    bottom: 0;
+    left: 0.05em;
+    right: 0.05em;
+
+    &::before, &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      border-bottom: 0.6em solid CurrentColor;
+      border-left: 0.8em solid transparent;
+      border-right: 0.8em solid transparent;
+    }
+    &:before {
+      right: 0;
+    }
+    &::after {
+      left: 0;
+    }
+  }
+  &.is-open {
+    &::after {
+      transform: rotateX(180deg);
+      transition: transform $transition;
+    }
+  }
+}

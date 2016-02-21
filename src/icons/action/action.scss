@@ -1,0 +1,67 @@
+$action__color-good: #0a0;
+$action__color-bad: #f00;
+$action__color2: #fff;
+$action__size: $icon-size;
+.u-action {
+  @extend %h-item-icon;
+  @extend %h-action-animation;
+  @extend %h-action;
+  &::before, &::after {
+    background-color: currentColor;
+  }
+  &-fill {
+    @extend %h-item-icon;
+    @extend %h-action-animation;
+    @extend %h-action;
+    background-color: currentColor;
+    border-radius: 50%;
+    &::before, &::after {
+      background-color: $action__color2;
+    }
+  }
+}
+%h-action {
+  color: $action__color-good;
+  font-size: $action__size;
+  width: 1.6em;
+  height: 1.6em;
+  transition: color $transition ease;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 1.2em;
+    height: 0.2em;
+    margin: auto;
+    transition: transform $transition ease;
+  }
+  &::after {
+    transform: rotate(90deg);
+    transition: transform $transition ease;
+  }
+}
+%h-action-animation {
+  &.is-remove {
+    color: $action__color-bad;
+    transition: color $transition ease;
+    &::after {
+      transform: rotate(0deg);
+      transition: transform $transition ease;
+    }
+  }
+  &.is-delete {
+    color: $action__color-bad;
+    transition: color $transition ease;
+    &:before {
+      transform: rotate(405deg);
+      transition: transform $transition ease;
+    }
+    &::after {
+      transform: rotate(495deg);
+      transition: transform $transition ease;
+    }
+  }
+}
