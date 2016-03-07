@@ -1,6 +1,18 @@
 $user__color: $icon-color;
 $user__size: $icon-size;
+.u-user-fill {
+  @extend %h-user;
+  &::before, &::after {
+    background-color: currentColor;
+  }
+}
 .u-user {
+  @extend %h-user;
+  &::before, &::after {
+    background-color: transparent;
+  }
+}
+%h-user {
   @extend %h-item-icon;
   color: $user__color;
   font-size: $user__size;
@@ -10,6 +22,10 @@ $user__size: $icon-size;
   &::before, &::after {
     content: "";
     display: block;
+    border-top: 0.1em solid currentColor;
+    border-left: 0.1em solid currentColor;
+    border-right: 0.1em solid currentColor;
+    box-sizing: border-box;
   }
   &:before {
     position: relative;
@@ -19,13 +35,12 @@ $user__size: $icon-size;
     margin: auto;
     width: 0.6em;
     height: 0.8em;
-    background-color: currentColor;
     border-radius: 46% 46% 60% 60%;
+    border-bottom: 0.1em solid currentColor;
   }
   &::after {
     width: 100%;
     height: 1.2em;
-    background-color: currentColor;
-    border-radius: 35%;
+    border-radius: 40%;
   }
 }
