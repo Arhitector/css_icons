@@ -65,3 +65,38 @@ $action__size: $icon-size;
     }
   }
 }
+.u-success {
+  @extend %h-item-icon;
+  color: $action__color-good;
+  font-size: $action__size;
+  border-left: 0.2em solid currentColor;
+  width: 1em;
+  height: 0.6em;
+  margin: .2em 0;
+  transform: rotate(-45deg);
+  transition: all $transition;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 1em;
+    height: 0.2em;
+    background-color: currentColor;
+    //transition: all $transition/2;
+  }
+  &.is-denied {
+    color: $action__color-bad;
+    border: 0.1em solid currentColor;
+    height: 1em;
+    margin: 0;
+    border-radius: 50%;
+    transform: rotate(-405deg);
+    transition: all $transition;
+    &::after {
+      bottom: 0.36em;
+      //transition: all $transition/2;
+    }
+  }
+}
