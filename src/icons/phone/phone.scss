@@ -12,7 +12,7 @@ $phone__size: $icon-size;
   &::before, &::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: -0.03em;
     width: 0.3em;
     height: 0.4em;
     background-color: currentColor;

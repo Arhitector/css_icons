@@ -1,0 +1,51 @@
+$list__color: $icon-color;
+$list__size: $icon-size;
+.u-list {
+  @extend %h-list;
+  &::before, &::after {
+    box-shadow: 0 0.2em 0 0 currentColor,
+    0 0.4em 0 0 currentColor,
+    0 0.6em 0 0 currentColor;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+}
+.u-list2 {
+  @extend %h-list;
+  border-left: 0.1em solid currentColor;
+  border-right: 0.1em solid currentColor;
+  border-bottom: 0.1em solid currentColor;
+  border-top: 0.2em solid currentColor;
+  padding: 0.2em 0.2em 0;
+  border-radius: 0.1em;
+  box-sizing: border-box;
+  &::before, &::after {
+    box-shadow: 0 0.2em 0 0 currentColor,
+    0 0.4em 0 0 currentColor;
+  }
+  &:before {
+    top: 0.2em;
+    left: 0.2em;
+  }
+}
+%h-list {
+  @extend %h-item-icon;
+  color: $list__color;
+  font-size: $list__size;
+  &::before, &::after {
+    content: "";
+    background-color: currentColor;
+    display: block;
+    height: 0.1em;
+  }
+  &:before {
+    position: absolute;
+    width: 0.1em;
+  }
+  &::after {
+    width: 0.8em;
+    margin: 0 0 0.6em 0.2em;
+  }
+}

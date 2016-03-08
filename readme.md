@@ -34,4 +34,6 @@ go to folder icon that you want to use and copy class(classes) for usage
 - each folder of icon has '*.jade' file with class(classes) - for example and '*.scss' with styles
 - each scss file of icon nests font size and color from main file. You can configurate each icon individually with your properties.
 - there are some icons with animation. To see it it's necessary to add class from 'data-over'.
- 
+## Next plans
+trash, trangle arrow, eye, ribbon, tool, file, tags, 
+video, photo, pover, play, stop, pause, volume, mic,  bulb, 
