@@ -2,10 +2,10 @@ $phone__color: $icon-color;
 $phone__size: $icon-size;
 .u-phone {
   @extend %h-item-icon;
-  width: 1em;
-  height: 1.6em;
   color: $phone__color;
   font-size: $phone__size;
+  width: 1em;
+  height: 1.6em;
   border-left: 0.3em solid currentColor;
   border-radius: 34% 0 0 34%;
   transform: rotate(-30deg);

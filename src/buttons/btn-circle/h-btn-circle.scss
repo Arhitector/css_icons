@@ -1,0 +1,52 @@
+$h-btn-circle-width: 50px;
+$h-btn-circle-border: 4px;
+$h-btn-circle-start-color: $btn-color;
+$h-btn-circle-end-color: darken($btn-color, 10%);
+$h-btn-circle-start-color-hover: lighten($h-btn-circle-start-color, 20%);
+$h-btn-circle-end-color-hover: darken($h-btn-circle-start-color, 20%);
+$h-btn-circle-start-color-active: lighten($h-btn-circle-start-color, 30%);
+$h-btn-circle-end-color-active: darken($h-btn-circle-start-color, 30%);
+
+%h-btn-circle {
+	@extend %h-item-btn;
+	border-radius: 50%;
+	min-width: 0;
+	padding: 0;
+	margin: $h-btn-circle-border*2;
+	height: auto;
+	vertical-align: middle;
+	background-image: linear-gradient(0deg, $h-btn-circle-start-color 0%, $h-btn-circle-end-color 100%);
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -$h-btn-circle-border;
+		right: -$h-btn-circle-border;
+		left: -$h-btn-circle-border;
+		top: -$h-btn-circle-border;
+		border-radius: 50%;
+		background-image: linear-gradient(180deg, $h-btn-circle-start-color 0%, $h-btn-circle-end-color 100%);
+		z-index: -1;
+	}
+	.va {
+		width: $h-btn-circle-width;
+		height: $h-btn-circle-width;
+	}
+	&:hover, &.is-hover {
+		background-image: linear-gradient(0deg, $h-btn-circle-start-color-hover 0%, $h-btn-circle-end-color-hover 100%);
+		&:before {
+			background-image: linear-gradient(180deg, $h-btn-circle-start-color-hover 0%, $h-btn-circle-end-color-hover 100%);
+		}
+	}
+	&:active, &:focus, &.is-active  {
+		background-image: linear-gradient(0deg, $h-btn-circle-start-color-active 0%, $h-btn-circle-end-color-active 100%);
+		&:before {
+			background-image: linear-gradient(180deg, $h-btn-circle-start-color-active 0%, $h-btn-circle-end-color-active 100%);
+		}
+	}
+	&:disabled, &.is-disable {
+		background-image: linear-gradient(0deg, $start-color-disable 0%, $stop-color-disable 100%);
+		&:before {
+			background-image: linear-gradient(45deg, $start-color-disable 0%, $stop-color-disable 100%);
+		}
+	}
+}

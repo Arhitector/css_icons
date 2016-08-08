@@ -8,11 +8,11 @@ $arrow__size: $icon-size;
   &:before {
     content: "";
     display: block;
-    width: 1.25em;
-    height: 1.25em;
-    margin: 0.25em 0.45em 0.25em -0.25em;
-    border-right: currentColor solid 0.2em;
-    border-bottom: currentColor solid 0.2em;
+    width: 0.75em;
+    height: 0.75em;
+    margin: 0.2em 0.35em 0.2em -0.2em;
+    border-right: currentColor solid 0.15em;
+    border-bottom: currentColor solid 0.15em;
     transform: rotate(-45deg);
   }
 }

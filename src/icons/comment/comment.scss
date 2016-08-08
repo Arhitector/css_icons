@@ -9,17 +9,17 @@ $comment__size: $icon-size;
     display: block;
   }
   &:before {
-    border-radius: 0.25em;
+    border-radius: 8%/16%;
     background-color: currentColor;
-    width: 1.75em;
-    height: 0.85em;
+    width: 1em;
+    height: 0.5em;
   }
   &::after {
     position: relative;
     left: 50%;
     width: 0;
     height: 0;
-    border-top: 0.4em solid currentColor;
-    border-right: 0.4em solid transparent;
+    border-top: 0.25em solid currentColor;
+    border-right: 0.3em solid transparent;
   }
 }

@@ -33,7 +33,7 @@ $folder__size: $icon-size;
   }
   &.is-open {
     &::after {
-      top: 0.01em;
+      top: 0.05em;
       transform: skew(-12deg);
       transition: transform $transition, top $transition;
     }

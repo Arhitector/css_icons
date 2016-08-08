@@ -1,0 +1,9 @@
+$btn-shd-round: 3px;
+.btn-shd {
+	@extend .btn;
+	box-shadow: 0 3px 1px 0 darken($btn-color, 20%);
+	border-radius: $btn-shd-round;
+	&:disabled, &.is-disable {
+		box-shadow: 0 3px 1px 0 darken($btn-color-disable, 20%);
+	}
+}

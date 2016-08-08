@@ -1,0 +1,24 @@
+html
+	head
+		title Css pattrens
+		link(rel="stylesheet" href="./bg.css")
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+	body
+		include bg/skin/skin.jade
+		include bg/star-sky/star-sky.jade
+		include bg/sofa/sofa.jade
+		include bg/bricks/bricks.jade
+		include bg/parquet/parquet.jade
+		script.
+			$('button').click(function () {
+				$("body").removeClass();
+				var adClass = $(this).data('class');
+				if (adClass) {
+					$("body").addClass(adClass);
+				}
+			});
+		style.
+			button {
+				width: 100px;
+				height: 40px;
+			}

@@ -1,0 +1,28 @@
+$view__color: $icon-color;
+$view__size: $icon-size;
+.u-view {
+  @extend %h-item-icon;
+  color: $view__color;
+  font-size: $view__size;
+  &::before, &::after {
+    content: "";
+    display: block;
+  }
+  &:before {
+    border-radius: 50%;
+    width: 0.2em;
+    height: 0.2em;
+    background-color: currentColor;
+    margin: 0.3em;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    border: 0.1em solid currentColor;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1em 0 1em 0;
+    transform: rotate(45deg);
+  }
+}

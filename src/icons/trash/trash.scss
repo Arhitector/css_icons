@@ -1,0 +1,35 @@
+$trash__color: $icon-color;
+$trash__size: $icon-size;
+.u-trash {
+  @extend %h-item-icon;
+  color: $trash__color;
+  font-size: $trash__size;
+  width: 0.7em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-radius: 0.1em;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+  }
+  &:before {
+    bottom: 1.1em;
+    width: 0.2em;
+    height: 0.1em;
+    margin-bottom:-0.1em;
+    border: 0.1em solid currentColor;
+    border-radius: 0.1em;
+  }
+  &::after {
+    bottom: 0;
+    top: 0;
+    width: 0.05em;
+    height: 0.5em;
+    background-color: currentColor;
+    box-shadow: 0.1em 0 0 0 currentColor, -0.1em 0 0 0 currentColor;
+  }
+}

@@ -1,0 +1,10 @@
+@import 'h-btn-sharp';
+.btn-sharp {
+	@extend %h-btn-sharp;
+	&-left {
+		@extend %h-btn-sharp-left;
+	}
+	&-right {
+		@extend %h-btn-sharp-right;
+	}
+}

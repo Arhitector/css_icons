@@ -1,0 +1,67 @@
+$start-color: #1e5799;
+$stop-color: #7db9e8;
+$start-color-hover: lighten($start-color, 20%);
+$stop-color-hover: lighten($stop-color, 20%);
+$start-color-active: darken($start-color, 10%);
+$stop-color-active: darken($stop-color, 10%);
+$start-color-disable: grayscale($start-color);
+$stop-color-disable: grayscale($stop-color);
+$border-color: #000;
+.btn-sharp2 {
+	@extend %h-item-btn;
+	background-image: linear-gradient(0deg, $start-color 0%, $stop-color 100%);
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	box-sizing: border-box;
+	margin: 0 $btn-height/2;
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: getSize((strip-unit($btn-height)/2*strip-unit($btn-height)/2)*2);
+		height: getSize((strip-unit($btn-height)/2*strip-unit($btn-height)/2)*2);
+		border: 2px solid $border-color;
+		box-sizing: border-box;
+		z-index: -1;
+	}
+	&:before {
+		right: 100%;
+		transform: rotate(-45deg) translate(35%, 35%);
+		background-image: linear-gradient(45deg, $start-color 0%, $stop-color 100%);
+	}
+	&::after {
+		left: 100%;
+		transform: rotate(-45deg) translate(-35%, -35%);
+		background-image: linear-gradient(45deg, $start-color 0%, $stop-color 100%);
+	}
+	cursor: pointer;
+	&:hover, &.is-hover {
+		background-image: linear-gradient(0deg, $start-color-hover 0%, $stop-color-hover 100%);
+		&::after {
+			background-image: linear-gradient(45deg, $start-color-hover 0%, $stop-color-hover 100%);
+		}
+		&:before {
+			background-image: linear-gradient(45deg, $start-color-hover 0%, $stop-color-hover 100%);
+		}
+	}
+	&:active, &:focus, &.is-active  {
+		background-image: linear-gradient(0deg, $start-color-active 0%, $stop-color-active 100%);
+		&::after {
+			background-image: linear-gradient(45deg, $start-color-active 0%, $stop-color-active 100%);
+		}
+		&:before {
+			background-image: linear-gradient(45deg, $start-color-active 0%, $stop-color-active 100%);
+		}
+	}
+	&:disabled, &.is-disable {
+		background-image: linear-gradient(0deg, $start-color-disable 0%, $stop-color-disable 100%);
+		&::after {
+			background-image: linear-gradient(45deg, $start-color-disable 0%, $stop-color-disable 100%);
+		}
+		&:before {
+			background-image: linear-gradient(45deg, $start-color-disable 0%, $stop-color-disable 100%);
+		}
+	}
+}

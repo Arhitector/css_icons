@@ -1,6 +1,5 @@
 $pie__color: $icon-color;
 $pie__size: $icon-size;
-$pie__size-sector: 0.35em;
 $pie__color-sector: #a00;
 .u-pie {
   @extend %h-item-icon;
@@ -17,12 +16,12 @@ $pie__color-sector: #a00;
     content: "";
     position: absolute;
     left: 0.1em;
-    top: $pie__size-sector * (-1);
+    top: -0.34em;
     width: 0;
     height: 0;
-    border-right: $pie__size-sector solid $pie__color-sector;
-    border-top: $pie__size-sector solid transparent;
-    border-bottom: $pie__size-sector solid transparent;
+    border-right: 0.34em solid $pie__color-sector;
+    border-top: 0.34em solid transparent;
+    border-bottom: 0.34em solid transparent;
     border-radius: 50%;
   } 
 }

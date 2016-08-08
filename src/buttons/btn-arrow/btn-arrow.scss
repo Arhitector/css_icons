@@ -1,0 +1,7 @@
+@import 'h-btn-arrow';
+.btn-arrow-left {
+	@extend %h-btn-arrow-left;
+}
+.btn-arrow-right {
+	@extend %h-btn-arrow-right;
+}

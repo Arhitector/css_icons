@@ -15,7 +15,7 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('www/'));
 });
 gulp.task('sass', function () {
-    return gulp.src('./src/icons.scss')
+    return gulp.src('./src/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('www/'));
 });
