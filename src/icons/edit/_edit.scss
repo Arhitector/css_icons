@@ -1,0 +1,32 @@
+$edit__size: $icon-size;
+$edit__color: $icon-color;
+%u-edit {
+  @extend %h-item-icon;
+  color: $edit__color;
+  font-size: $edit__size;
+  margin: 0.4em 0;
+  transform: rotate(-45deg);
+  &::before, &::after {
+    content: "";
+    display: block;
+    background-color: currentColor;
+  }
+  &:before {
+    width: 0.7em;
+    height: 0.2em;
+    margin-left: 0.25em;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 0.11em solid transparent;
+    border-right: 0.2em solid currentColor;
+    border-bottom: 0.11em solid transparent;
+    background-color: transparent;
+  }
+}

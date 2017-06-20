@@ -1,0 +1,30 @@
+$place__size: $icon-size;
+$place__color: $icon-color;
+%u-place {
+    @extend %h-item-icon;
+    color: $place__color;
+    font-size: $place__size;
+    &::before, &::after {
+        content: "";
+        display: block;
+    }
+    &:before {
+        border-radius: 50%;
+        border: 0.3em solid currentColor;
+        width: 0.3em;
+        height: 0.3em;
+        margin-bottom: 0.4em;
+    }
+    &::after {
+        position: absolute;
+        top: 0.6em;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 0.8em solid CurrentColor;
+        border-left: 0.42em solid transparent;
+        border-right: 0.42em solid transparent;
+        margin: 0 auto;
+    }
+}

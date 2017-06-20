@@ -1,0 +1,31 @@
+$icon-size: 20px;
+$icon-color: #000;
+$transition: 300ms;
+%h-item-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+@import 'action/action';
+@import 'loader/loader';
+@import 'search/search';
+@import 'mail/mail';
+@import 'phone/phone';
+@import 'burger/burger';
+@import 'lock/lock';
+@import 'heart/heart';
+@import 'folder/folder';
+@import 'play/play';
+@import 'trash/trash';
+@import 'view/view';
+@import 'comment/comment';
+@import 'clock/clock';
+@import 'user/user';
+@import 'home/home';
+@import 'edit/edit';
+@import 'list/list';
+@import 'place/place';
+@import 'car/car';
+@import 'pie/pie';
+@import 'calendar/calendar';
+@import 'arrows/arrows';

@@ -1,0 +1,25 @@
+$comment__color: $icon-color;
+$comment__size: $icon-size;
+%u-comment {
+  @extend %h-item-icon;
+  font-size: $comment__size;
+  color: $comment__color;
+  &::before, &::after {
+    content: "";
+    display: block;
+  }
+  &:before {
+    border-radius: 8%/16%;
+    background-color: currentColor;
+    width: 1em;
+    height: 0.5em;
+  }
+  &::after {
+    position: relative;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 0.25em solid currentColor;
+    border-right: 0.3em solid transparent;
+  }
+}

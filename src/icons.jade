@@ -4,63 +4,393 @@ html
         link(rel="stylesheet" href="./icons.css")
         script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
     body
-        include icons/trash/trash
-        |trash
-        br
-        include icons/comment/comment
-        |comment
-        br
-        include icons/pie/pie
-        |pie
-        br
-        include icons/car/car
-        |car
-        br
-        include icons/view/view
-        |view
-        br
-        include icons/home/home
-        |home
-        br
-        include icons/list/list
-        |list
-        br
-        include icons/edit/edit
-        |edit
-        br
-        include icons/place/place
-        |place
-        br
-        include icons/user/user
-        |user
-        br
-        include icons/clock/clock
-        |clock
-        h4 arrows
-        include icons/arrows/arrows
-        h4 calendar
-        include icons/calendar/calendar
-        h2 Animated
-        h4 folder
-        include icons/folder/folder
-        h4 action
-        include icons/action/action
-        h4 heart
-        include icons/heart/heart
-        h4 play
-        include icons/play/play
-        h4 lock
-        include icons/lock/lock
-        h4 burger
-        include icons/burger/burger
-        h4 phone
-        include icons/phone/phone
-        h4 E-mail
-        include icons/mail/mail
-        h4 search
-        include icons/search/search
-        h4 loader
-        include icons/loader/loader
+        table(border=1 cellpadding=7)
+            thead
+                tr
+                    th
+                        h2 Static
+                tr
+                    td icon
+                    td name
+                    td code
+
+            tbody
+                tr
+                    td
+                        .u-trash
+                    td trash
+                    td
+                        code @extend %u-trash
+                tr
+                    td
+                        .u-comment
+                    td comment
+                    td
+                        code @extend %u-comment
+                tr
+                    td
+                        .u-pie
+                    td pie
+                    td
+                        code @extend %u-pie
+                tr
+                    td
+                        .u-car
+                    td car
+                    td
+                        code @extend %u-car
+                tr
+                    td
+                        .u-view
+                    td view
+                    td
+                        code @extend %u-view
+                tr
+                    td
+                        .u-home
+                    td home
+                    td
+                        code @extend %u-home
+                tr
+                    td
+                        .u-list
+                    td list
+                    td
+                        code @extend %u-list
+                tr
+                    td
+                        .u-list2
+                    td list2
+                    td
+                        code @extend %u-list2
+                tr
+                    td
+                        .u-edit
+                    td edit
+                    td
+                        code @extend %u-edit
+                tr
+                    td
+                        .u-place
+                    td place
+                    td
+                        code @extend %u-place
+                tr
+                    td
+                        .u-user
+                    td user
+                    td
+                        code @extend %u-user
+                tr
+                    td
+                        .u-user-fill
+                    td user-fill
+                    td
+                        code @extend %u-user-fill
+                tr
+                    td
+                        .u-clock
+                    td clock
+                    td
+                        code @extend %u-clock
+                tr
+                    td
+                        .u-calendar 31
+                    td calendar
+                    td
+                        code @extend %u-calendar
+                tr
+                    td
+                        .u-calendar2
+                    td calendar2
+                    td
+                        code @extend %u-calendar2
+                tr
+                    td
+                        .u-arrow-type1
+                        .u-arrow-type1.is-top
+                        .u-arrow-type1.is-left
+                        .u-arrow-type1.is-bottom
+                    td arrow
+                    td
+                        code @extend %u-arrow-type1
+                        br
+                        code.
+                            .is-top
+                            .is-left
+                            .is-bottom
+                tr
+                    td
+                        .u-arrow-type2
+                        br
+                        .u-arrow-type2.is-top
+                        br
+                        .u-arrow-type2.is-left
+                        br
+                        .u-arrow-type2.is-bottom
+                    td arrow 2
+                    td
+                        code @extend %u-arrow-type2
+                        br
+                        code.
+                            .is-top
+                            .is-left
+                            .is-bottom
+                tr
+                    td
+                        .u-arrow-type3
+                            .u-arrow__inner
+                        br
+                        .u-arrow-type3.is-top
+                            .u-arrow__inner
+                        br
+                        .u-arrow-type3.is-left
+                            .u-arrow__inner
+                        br
+                        .u-arrow-type3.is-bottom
+                            .u-arrow__inner
+                    td arrow 3
+                    td
+                        code @extend %u-arrow-type3
+                        br
+                        code.
+                            .is-top
+                            .is-left
+                            .is-bottom
+                        br
+                        |need extra class inside .u-arrow__inner
+
+
+        table(border=1 cellpadding=7)
+            thead
+                th
+                    h2 Animated
+            tbody
+                tr
+                    td
+                        .u-folder(data-over="is-active")
+                    td folder
+                    td
+                        code @extend %u-folder
+                        br
+                        em
+                            b is-active
+                            | class for active state
+                tr
+                    td
+                        .u-heart(data-over="is-beat")
+                    td heart
+                    td
+                        code
+                            |@extend %u-heart
+                        br
+                        em
+                            b is-beat
+                            |  class for active state
+                tr
+                    td
+                        .u-action-fill(data-over="is-delete")
+                        br
+                        .u-action-fill(data-over="is-remove")
+                    td action fill
+                    td
+                        code
+                            | @extend %u-action-fill
+                        br
+                        em
+                            b is-delete
+                            |  or
+                            b  is-remove
+                            |  class for active state
+                tr
+                    td
+                        .u-action(data-over="is-delete")
+                        br
+                        .u-action(data-over="is-remove")
+                    td action
+                    td
+                        code
+                            | @extend %u-action
+                            br
+                            em
+                                b is-delete
+                                |  or
+                                b  is-remove
+                                |  class for active state
+                tr
+                    td
+                        .u-success(data-over="is-denied")
+                    td success
+                        td
+                            code
+                                | @extend %u-success
+                                br
+                                em
+                                    b is-denied
+                                    | class for active state
+                tr
+                    td
+                        .u-play-fill(data-over="is-pause")
+                    td play fill
+                    td
+                        code
+                            | @extend %u-play-fill
+                            br
+                            em
+                                b is-pause
+                                | class for active state
+                tr
+                    td
+                        .u-play-fill2(data-over="is-pause")
+                    td play fill2
+                    td
+                        code
+                            | @extend %u-play-fill2
+                            br
+                            em
+                                b is-pause
+                                | class for active state
+                tr
+                    td
+                        .u-play(data-over="is-pause")
+                    td play
+                    td
+                        code
+                            | @extend %u-play
+                            br
+                            em
+                                b is-pause
+                                | class for active state
+                tr
+                    td
+                        .u-play-square(data-over="is-pause")
+                    td play square
+                    td
+                        code
+                            | @extend %u-play-square
+                            br
+                            em
+                                b is-pause
+                                | class for active state
+                tr
+                    td
+                        .u-lock(data-over="is-unlock")
+                    td lock
+                    td
+                        code
+                            | @extend %u-lock
+                            br
+                            em
+                                b is-unlock
+                                | class for active state
+                tr
+                    td
+                        .u-burger(data-over="is-over")
+                            .u-burger__inner
+                    td burger
+                    td
+                        code
+                            | @extend %u-burger
+                        br
+                        em
+                            b is-over
+                            |  class for active state
+                        br
+                        |need extra class inside
+                        code.
+                            .u-burger > .u-burger__inner
+                tr
+                    td
+                        .u-phone(data-over="is-call")
+                            .u-phone__inner
+                    td phone
+                    td
+                        code
+                            | @extend %u-phone
+                        br
+                        em
+                            b is-call
+                            |  class for active state
+                        br
+                        | need extra class inside
+                        code .u-phone > .u-phone__inner
+                tr
+                    td
+                        .u-phone2(data-over="is-call")
+                            .u-phone2__inner
+                    td phone2
+                    td
+                        code
+                            | @extend %u-phone2
+                        br
+                        em
+                            b is-call
+                            |  class for active state
+                        br
+                        | need extra class inside
+                        code .u-phone2 > .u-phone2__inner
+                tr
+                    td
+                        .u-mail(data-over="is-open")
+                            .u-mail__inner
+                    td mail
+                    td
+                        code
+                            | @extend %u-mail
+                        br
+                        em
+                            b is-open
+                            |  class for active state
+                        br
+                        | need extra class inside
+                        code .u-mail > .u-mail__inner
+                tr
+                    td
+                        .u-mail2
+                    td mail2
+                    td
+                        code
+                            | @extend %u-mail2
+                tr
+                    td
+                        .u-search(data-over="is-cancel")
+                    td search
+                    td
+                        code
+                            | @extend %u-search
+                        br
+                        em
+                            b is-cansel
+                            |  class for active state
+                tr
+                    td
+                        .u-loader-round
+                    td loader round
+                    td
+                        code
+                            | @extend %u-loader-round
+                tr
+                    td
+                        .u-loader-r-circle
+                    td loader circle
+                    td
+                        code
+                            | @extend %u-loader-r-circle
+                tr
+                    td
+                        .u-loader-dotted
+                    td loader dotted
+                    td
+                        code
+                            | @extend %u-loader-dotted
+                tr
+                    td
+                        .u-loader-line
+                    td loader line
+                    td
+                        code
+                            | @extend %u-loader-line
+
         script.
             $('div').click(function () {
                 var adClass = $(this).data('over');

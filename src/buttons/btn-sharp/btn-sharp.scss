@@ -1,10 +1,70 @@
-@import 'h-btn-sharp';
-.btn-sharp {
-	@extend %h-btn-sharp;
-	&-left {
-		@extend %h-btn-sharp-left;
-	}
-	&-right {
-		@extend %h-btn-sharp-right;
-	}
+$h-btn-sharp-border-width: $btn-height/2;
+%h-btn-sharp-left {
+    @extend %h-item-btn;
+    margin: 0 0 0 $h-btn-sharp-border-width;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        border-style: solid;
+        border-width: $h-btn-sharp-border-width;
+        border-color: transparent;
+        right: 100%;
+        border-right-color: $btn-color;
+    }
+    &:hover, &.is-hover {
+        &:before {
+            border-right-color: $btn-color-hover;
+        }
+    }
+    &:active, &:focus, &.is-active  {
+        &:before {
+            border-right-color: $btn-color-active;
+        }
+    }
+    &:disabled, &.is-disable {
+        &:before {
+            border-right-color: $btn-color-disable;
+        }
+    }
+}
+%h-btn-sharp-right {
+    margin: 0 $h-btn-sharp-border-width 0 0;
+    @extend %h-item-btn;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        border-style: solid;
+        border-width: $btn-height/2;
+        border-color: transparent;
+        left: 100%;
+        border-left-color: $btn-color;
+    }
+    &:hover, &.is-hover {
+        &::after {
+            border-left-color: $btn-color-hover;
+        }
+    }
+    &:active, &:focus, &.is-active  {
+        &::after {
+            border-left-color: $btn-color-active;
+        }
+    }
+    &:disabled, &.is-disable {
+        &::after {
+            border-left-color: $btn-color-disable;
+        }
+    }
+}
+%h-btn-sharp {
+
+    @extend %h-item-btn;
+    @extend %h-btn-sharp-left;
+    @extend %h-btn-sharp-right;
+    margin: 0 $h-btn-sharp-border-width;
 }

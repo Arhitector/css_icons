@@ -1,7 +1,86 @@
-@import 'h-btn-arrow';
-.btn-arrow-left {
-	@extend %h-btn-arrow-left;
-}
-.btn-arrow-right {
-	@extend %h-btn-arrow-right;
+%h-btn-arrow {
+    &-right {
+        @extend %h-btn;
+        @extend %h-item-btn;
+        margin: 0 $btn-height/2;
+        &::after {
+            left: 100%;
+            border-left-color: $btn-color;
+        }
+        &:before {
+            right: 100%;
+            border-top-color: $btn-color;
+            border-bottom-color: $btn-color;
+            transform: translateX(50%);
+        }
+        &:hover, &.is-hover {
+            &:before {
+                border-top-color: $btn-color-hover;
+                border-bottom-color: $btn-color-hover;
+            }
+            &::after {
+                border-left-color: $btn-color-hover;
+            }
+        }
+        &:active, &:focus, &.is-active  {
+            &:before {
+                border-top-color: $btn-color-active;
+                border-bottom-color: $btn-color-active;
+            }
+            &::after {
+                border-left-color: $btn-color-active;
+            }
+        }
+        &:disabled, &.is-disable {
+            &:before {
+                border-top-color: $btn-color-disable;
+                border-bottom-color: $btn-color-disable;
+            }
+            &::after {
+                border-left-color: $btn-color-disable;
+            }
+        }
+    }
+    &-left {
+        @extend %h-btn;
+        @extend %h-item-btn;
+        margin: 0 $btn-height/2;
+        &:before {
+            right: 100%;
+            border-right-color: $btn-color;
+        }
+        &::after {
+            left: 100%;
+            border-top-color: $btn-color;
+            border-bottom-color: $btn-color;
+            transform: translateX(-50%);
+        }
+        &:hover, &.is-hover {
+            &:before {
+                border-right-color: $btn-color-hover;
+            }
+            &::after {
+                border-top-color: $btn-color-hover;
+                border-bottom-color: $btn-color-hover;
+            }
+        }
+        &:active, &:focus, &.is-active  {
+            &:before {
+                border-right-color: $btn-color-active;
+            }
+            &::after {
+                border-top-color: $btn-color-active;
+                border-bottom-color: $btn-color-active;
+            }
+        }
+        &:disabled, &.is-disable {
+            &:before {
+                border-right-color: $btn-color-disable;
+            }
+            &::after {
+                border-top-color: $btn-color-disable;
+                border-bottom-color: $btn-color-disable;
+            }
+        }
+    }
 }

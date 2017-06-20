@@ -1,19 +1,70 @@
 html
-	head
-		title Css pattrens
-		link(rel="stylesheet" href="./buttons.css")
-		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
-	body
-		include buttons/btn/btn.jade
-		br
-		include buttons/btn-round/btn-round.jade
-		br
-		include buttons/btn-sharp/btn-sharp.jade
-		br
-		include buttons/btn-sharp2/btn-sharp2.jade
-		br
-		include buttons/btn-arrow/btn-arrow.jade
-		br
-		include buttons/btn-shd/btn-shd.jade
-		br
-		include buttons/btn-circle/btn-circle.jade
+    head
+        title Css pattrens
+        link(rel="stylesheet" href="./buttons.css")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+    body
+        include buttons/btn/btn.jade
+        br
+        include buttons/btn-round/btn-round.jade
+        br
+        include buttons/btn-sharp2/btn-sharp2.jade
+        br
+        include buttons/btn-shd/btn-shd.jade
+        br
+        table(border=1 cellpadding=7)
+            thead
+                tr
+                    td Buttons
+                tr
+                    td button
+                    td
+                    td
+
+            tbody
+                tr
+                    td
+                        .btn-circle
+                            .va push
+                        a(href="javascript:void(0);" title="").btn-circle
+                            .va push
+                        button(type='button').btn-circle
+                            .va push
+                        .btn-circle.is-disable
+                            .va push
+                    td
+                    td
+                tr
+                    td
+                        .btn-arrow-right button
+                        a(href="javascript:void(0);" title="").btn-arrow-right button
+                        button(type='button').btn-arrow-right button
+                        .btn-arrow-right.is-disable button
+                        br
+                        br
+                        .btn-arrow-left button
+                        a(href="javascript:void(0);" title="").btn-arrow-left button
+                        button(type='button').btn-arrow-left button
+                        .btn-arrow-left.is-disable button
+                    td
+                    td
+                tr
+                    td
+                        .btn-sharp button
+                        a(href="javascript:void(0);" title="").btn-sharp button
+                        button(type='button').btn-sharp button
+                        .btn-sharp.is-disable button
+                        br
+                        br
+                        .btn-sharp-left button
+                        a(href="javascript:void(0);" title="").btn-sharp-left button
+                        button(type='button').btn-sharp-left button
+                        .btn-sharp-left.is-disable button
+                        br
+                        br
+                        .btn-sharp-right button
+                        a(href="javascript:void(0);" title="").btn-sharp-right button
+                        button(type='button').btn-sharp-right button
+                        .btn-sharp-right.is-disable button
+                    td
+                    td

@@ -1,71 +1,24 @@
-$btn-height: 32px;
-$btn-color: #0f0;
-$btn-color-hover: lighten($btn-color, 20%);
-$btn-color-active: darken($btn-color, 10%);
-$btn-color-disable: grayscale($btn-color);
-$transition: 300ms;
-%h-item-btn {
-	@extend %h-specific;
-	@extend %h-btn-actions;
-	position: relative;
-	display: inline-block;
-	border: none;
-}
-%h-specific {
-	height: $btn-height;
-	min-width: $btn-height*2;
-	margin: 0 10px;
-	padding: 0 10px;
-	background-color: $btn-color;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 16px;
-	line-height: $btn-height;
-}
-%h-btn-actions {
-	cursor: pointer;
-	&:hover, &.is-hover {
-		background-color: $btn-color-hover;
-	}
-	&:active, &:focus, &.is-active  {
-		background-color: $btn-color-active;
-	}
-	&:disabled, &.is-disable {
-		background-color: $btn-color-disable;
-		cursor: inherit;
-		pointer-events: none;
-	}
-}
-.va {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+@import "buttons/u-buttons.scss";
+.btn {
+    @extend %h-btn;
 }
 
-@function getSize($r) {
-	$x0: 1;
-	$x1: $x0;
-
-	@for $i from 1 through 10 {
-		$x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
-		$x0: $x1;
-	}
-
-
-	@return $x1 + px;
+.btn-arrow-left {
+    @extend %h-btn-arrow-left;
 }
-@function strip-unit($number) {
-	@if type-of($number) == 'number' and not unitless($number) {
-		@return $number / ($number * 0 + 1);
-	}
-
-	@return $number;
+.btn-arrow-right {
+    @extend %h-btn-arrow-right;
 }
 
-@import 'buttons/btn/btn';
-@import 'buttons/btn-round/btn-round';
-@import 'buttons/btn-sharp/btn-sharp';
-@import "buttons/btn-sharp2/btn-sharp2";
-@import "buttons/btn-arrow/btn-arrow";
-@import "buttons/btn-shd/btn-shd";
-@import "buttons/btn-circle/btn-circle";
+.btn-circle {
+    @extend %h-btn-circle;
+}
+.btn-sharp {
+    @extend %h-btn-sharp;
+    &-left {
+        @extend %h-btn-sharp-left;
+    }
+    &-right {
+        @extend %h-btn-sharp-right;
+    }
+}

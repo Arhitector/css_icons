@@ -1,0 +1,295 @@
+$loader__size: $icon-size;
+$loader__color: $icon-color;
+$loader__transition: $transition * 3;
+%u-loader-round {
+    @extend %h-item-icon;
+    color: $loader__color;
+    font-size: $loader__size;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    border-width: 0.2em;
+    border-style: solid;
+    border-color: currentColor transparent currentColor currentColor;
+    animation: rotate-loader $loader__transition infinite linear;
+}
+
+@keyframes rotate-loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+%u-loader-r-circle {
+    @extend %h-item-icon;
+    color: $loader__color;
+    font-size: $loader__size;
+    &:before {
+        content: "";
+        display: block;
+        width: 0.1em;
+        height: 0.1em;
+        margin: 1.5em;
+        border-radius: 50%;
+        animation: circle-loader $loader__transition infinite linear;
+    }
+}
+
+@keyframes circle-loader {
+    0% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 1),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.75),
+        1.2em 0 0 0.3em rgba($loader__color, 0.5),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+    12% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.75),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.5),
+        1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 1);
+    }
+    25% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.5),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.15),
+        1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 1),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.75);
+    }
+    37% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.15),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.15),
+        1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 1),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.75),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.5);
+    }
+    50% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.15),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.15),
+        1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 1),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.75),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.5),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+    62% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.15),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.15),
+        1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 1),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.75),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.5),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+    75% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.15),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.15),
+        1.2em 0 0 0.3em rgba($loader__color, 1),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.75),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.5),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+    87% {
+        box-shadow: 0 1.2em 0 0.3em rgba($loader__color, 0.15),
+        0.9em 0.9em 0 0.3em rgba($loader__color, 1),
+        1.2em 0 0 0.3em rgba($loader__color, 0.75),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.5),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+    100% {
+        box-shadow: 0 1.2em 0 0.3em $loader__color,
+        0.9em 0.9em 0 0.3em rgba($loader__color, 0.75),
+        1.2em 0 0 0.3em rgba($loader__color, 0.5),
+        0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        0 -1.2em 0 0.3em rgba($loader__color, 0.15),
+        -0.9em -0.9em 0 0.3em rgba($loader__color, 0.15),
+        -1.2em 0 0 0.3em rgba($loader__color, 0.15),
+        -0.9em 0.9em 0 0.3em rgba($loader__color, 0.15);
+    }
+}
+
+%u-loader-dotted {
+    @extend %h-item-icon;
+    color: $loader__color;
+    font-size: $loader__size;
+    &:before {
+        margin: 0 1.4em;
+        content: "";
+        position: relative;
+        top: 0.6em;
+        display: block;
+        width: 0.1em;
+        height: 0.1em;
+        background-color: transparent;
+        border-radius: 50%;
+        animation: rotate-dotted $loader__transition infinite linear;
+    }
+}
+
+@keyframes rotate-dotted {
+    0% {
+        box-shadow: 0 -0.6em 0 0.3em currentColor,
+        1.2em -0.6em 0 0.3em currentColor,
+        -1.2em -0.6em 0 0.3em currentColor;
+    }
+    10% {
+        box-shadow: 0 -0.6em 0 0.3em currentColor,
+        1.2em -0.6em 0 0.2em currentColor,
+        -1.2em -0.6em 0 0.3em currentColor;
+    }
+    20% {
+        box-shadow: 0 -0.6em 0 0.2em currentColor,
+        1.2em -0.6em 0 0.1em currentColor,
+        -1.2em -0.6em 0 0.3em currentColor;
+    }
+    30% {
+        box-shadow: 0 -0.6em 0 0.1em currentColor,
+        1.2em -0.6em 0 0 currentColor,
+        -1.2em -0.6em 0 0.2em currentColor;
+    }
+    40% {
+        box-shadow: 0 -0.6em 0 0 transparent,
+        1.2em -0.6em 0 0 transparent,
+        -1.2em -0.6em 0 0.1em currentColor;
+    }
+    50% {
+        box-shadow: 0 -0.6em 0 0 transparent,
+        1.2em -0.6em 0 0 transparent,
+        -1.2em -0.6em 0 0 transparent;
+    }
+    60% {
+        box-shadow: 0 -0.6em 0 0 transparent,
+        1.2em -0.6em 0 0.1em currentColor,
+        -1.2em -0.6em 0 0 transparent;
+    }
+    70% {
+        box-shadow: 0 -0.6em 0 0.1em currentColor,
+        1.2em -0.6em 0 0.2em currentColor,
+        -1.2em -0.6em 0 0 transparent;
+    }
+    80% {
+        box-shadow: 0 -0.6em 0 0.2em currentColor,
+        1.2em -0.6em 0 0.3em currentColor,
+        -1.2em -0.6em 0 0.1em currentColor;
+    }
+    90% {
+        box-shadow: 0 -0.6em 0 0.3em currentColor,
+        1.2em -0.6em 0 0.3em currentColor,
+        -1.2em -0.6em 0 0.2em currentColor;
+    }
+    100% {
+        box-shadow: 0 -0.6em 0 0.3em currentColor,
+        1.2em -0.6em 0 0.3em currentColor,
+        -1.2em -0.6em 0 0.3em currentColor;
+    }
+}
+$loader-line-amount: 5;
+$loader-line-gap: 0.8em;
+$loader-line-size: 0.1em;
+$loader-line-size-active: $loader-line-size*3;
+@function loader-lines($amount, $gap, $size, $active-el: false, $active-size: $loader-line-size-active) {
+    //$value: $gap 0 0 $size currentColor;
+    $value: false;
+    $result: false;
+    $start: 1;
+    @for $i from $start through $amount {
+        @if ($active-el == $i) {
+            $value: $gap*$i 0 0 $active-size currentColor;    
+        }
+        @else {
+            $value: $gap*$i 0 0 $size currentColor;
+        }
+        
+        @if $i == $start {
+            $result: #{$value};      
+        }
+        @else {
+            $result: #{$result}, #{$value};
+        }
+    
+
+    }
+    @return $result;
+}
+@mixin loader-lines-animation($amount, $gap, $size) {
+    //$amount: $amount+1;
+    $start: 0;
+    @keyframes animate-line {
+        @for $i from $start through $amount {
+            $active-item: $i + 1;
+            @if ($i == $amount) {$active-item: $start + 1}
+            #{100%/$amount*$i} {
+                box-shadow: loader-lines($amount, $gap, $size, $active-item);
+            }
+        }
+    }
+}
+%u-loader-line {
+    @extend %h-item-icon;
+    color: $loader__color;
+    font-size: $loader__size;
+    width: ($loader-line-amount - 1) * 1em;
+    height: 1em + $loader-line-size-active;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0.15em;
+        left: -0.5em;
+        bottom: 0;
+        display: block;
+        width: 0.2em;
+        height: 1em;
+        border-radius: 0.01em;
+        box-shadow: loader-lines($loader-line-amount ,$loader-line-gap, $loader-line-size);
+        animation-name: animate-line;
+        animation-duration: $loader__transition;
+        animation-iteration-count: infinite;
+    }
+}
+@include loader-lines-animation($loader-line-amount ,$loader-line-gap, $loader-line-size);
+
+//@keyframes animate-line {
+//    0% {
+//        box-shadow: $loader-line-gap 0 0 $loader-line-size currentColor,
+//                    $loader-line-gap*2 0 0 $loader-line-size-active currentColor,
+//                    $loader-line-gap*3 0 0 $loader-line-size currentColor;
+//    }
+//    33.3% {
+//        box-shadow: $loader-line-gap 0 0 $loader-line-size currentColor,
+//                    $loader-line-gap*2 0 0 $loader-line-size currentColor,
+//                    $loader-line-gap*3 0 0 $loader-line-size-active currentColor;
+//    }
+//    66.6% {
+//        box-shadow: $loader-line-gap 0 0 $loader-line-size-active currentColor,
+//                    $loader-line-gap*2 0 0 $loader-line-size currentColor,
+//                    $loader-line-gap*3 0 0 $loader-line-size currentColor;
+//    }
+//    100% {
+//        box-shadow: $loader-line-gap 0 0 $loader-line-size currentColor,
+//                    $loader-line-gap*2 0 0 $loader-line-size-active currentColor,
+//                    $loader-line-gap*3 0 0 $loader-line-size currentColor;
+//    }
+//}

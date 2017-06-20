@@ -1,0 +1,62 @@
+$phone__color: $icon-color;
+$phone__size: $icon-size;
+%u-phone {
+    @extend %h-item-icon;
+    color: $phone__color;
+    font-size: $phone__size;
+    width: 1em;
+    height: 1.6em;
+    border-left: 0.3em solid currentColor;
+    border-radius: 34% 0 0 34%;
+    transform: rotate(-30deg);
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: -0.03em;
+        width: 0.3em;
+        height: 0.4em;
+        background-color: currentColor;
+    }
+    &:before {
+        top: 0;
+        border-radius: 34% 10% 10% 0;
+    }
+    &::after {
+        bottom: 0;
+        border-radius: 0 10% 10% 34%;
+    }
+    &__inner {
+        .is-call & {
+            @extend %h-call;
+        }    
+    }
+    
+}
+
+%u-phone2 {
+    @extend %u-phone;
+    &:before {
+        transform: skewX(-15deg);
+    }
+    &::after {
+        transform: skewX(15deg);
+    }
+    &__inner {
+        .is-call & {
+            @extend %h-call;
+        }
+    }
+}
+
+%h-call {
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    height: 0.5em;
+    width: 0.3em;
+    border-style: double;
+    border-width: 0.3em;
+    border-color: transparent currentColor transparent transparent;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}

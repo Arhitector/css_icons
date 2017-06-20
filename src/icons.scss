@@ -1,34 +1,185 @@
-$icon-size: 20px;
-$icon-color: #000;
-$transition: 300ms;
-%h-item-icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  //&:hover {
-  //  color: #f0f;
-  //}
+@import 'icons/u-icons';
+
+//actions
+.u-action-fill {
+    @extend %u-action-fill
 }
-@import 'icons/trash/trash';
-@import 'icons/comment/comment';
-@import 'icons/pie/pie';
-@import 'icons/car/car';
-@import 'icons/home/home';
-@import 'icons/list/list';
-@import 'icons/view/view';
-@import 'icons/edit/edit';
-@import 'icons/place/place';
-@import 'icons/user/user';
-@import 'icons/clock/clock';
-@import 'icons/arrows/arrows';
-@import 'icons/calendar/calendar';
-@import 'icons/folder/folder';
-@import 'icons/action/action';
-@import 'icons/heart/heart';
-@import 'icons/play/play';
-@import 'icons/lock/lock';
-@import 'icons/burger/burger';
-@import 'icons/phone/phone';
-@import 'icons/mail/mail';
-@import 'icons/search/search';
-@import 'icons/loader/loader';
+
+.u-action {
+    @extend %u-action;
+}
+
+.u-success {
+    @extend %u-success;
+}
+
+//loadres
+.u-loader-round {
+    @extend %u-loader-round;
+}
+
+.u-loader-r-circle {
+    @extend %u-loader-r-circle;
+}
+
+.u-loader-dotted {
+    @extend %u-loader-dotted;
+}
+
+.u-loader-line {
+    @extend %u-loader-line;
+}
+
+//search
+.u-search {
+    @extend %u-search;
+}
+
+//mail
+.u-mail {
+    @extend %u-mail;
+    &__inner {
+        @extend %u-mail__inner;
+    }
+}
+
+.u-mail2 {
+    @extend %u-mail2;
+}
+
+//phones
+.u-phone {
+    @extend %u-phone;
+    &__inner {
+        @extend %u-phone__inner;
+    }
+}
+
+.u-phone2 {
+    @extend %u-phone2;
+    &__inner {
+        @extend %u-phone2__inner;
+    }
+}
+
+//burger
+.u-burger {
+    @extend %u-burger;
+    &__inner {
+        @extend %u-burger__inner;
+    }
+}
+
+//lock
+.u-lock {
+    @extend %u-lock;
+    &__inner {
+        @extend %u-lock__inner;
+    }
+}
+
+//heart
+.u-heart {
+    @extend %u-heart;
+}
+
+//folder
+.u-folder {
+    @extend %u-folder;
+}
+
+//play button
+.u-play {
+    @extend %u-play;
+}
+
+.u-play-fill {
+    @extend %u-play-fill;
+}
+
+.u-play-fill2 {
+    @extend %u-play-fill2;
+}
+
+.u-play-square {
+    @extend %u-play-square;
+}
+
+// trash
+.u-trash {
+    @extend %u-trash;
+}
+
+// view
+.u-view {
+    @extend %u-view;
+}
+
+// comment
+.u-comment {
+    @extend %u-comment;
+}
+
+// clock
+.u-clock {
+    @extend %u-clock;
+}
+
+// user
+.u-user {
+    @extend %u-user;
+}
+.u-user-fill {
+    @extend %u-user-fill;
+}
+
+// home
+.u-home {
+    @extend %u-home;
+}
+
+// edit
+.u-edit{
+    @extend %u-edit;
+}
+
+// list
+.u-list{
+    @extend %u-list;
+}
+.u-list2 {
+    @extend %u-list2;
+}
+// place
+.u-place{
+    @extend %u-place;
+}
+// car
+.u-car{
+    @extend %u-car;
+}
+// pie
+.u-pie{
+    @extend %u-pie;
+}
+
+// calendar
+.u-calendar{
+    @extend %u-calendar;
+}
+// calendar2
+.u-calendar2{
+    @extend %u-calendar2;
+}
+
+//arrow
+.u-arrow-type1 {
+    @extend %u-arrow-type1;
+}
+.u-arrow-type2 {
+    @extend %u-arrow-type2;
+}
+.u-arrow-type3 {
+    @extend %u-arrow-type3;
+}
+//@import 'icons/arrows/arrows';

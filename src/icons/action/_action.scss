@@ -1,0 +1,131 @@
+/* 
+    type: 
+    .u-action
+        &.is-remove
+        &.is-delete
+    .u-success
+        &.is-denied
+    .u-action-fill
+        &.is-remove
+        &.is-delete
+*/
+$action__color-good: #0a0;
+$action__color-bad: #f00;
+$action__color2: #fff;
+$action__size: $icon-size;
+$action__transition: $transition;
+%u-action {
+    @extend %h-item-icon;
+    @extend %h-action-animation;
+    @extend %h-action;
+    &::before, &::after {
+        background-color: currentColor;
+    }
+    &-fill {
+        @extend %h-item-icon;
+        @extend %h-action-animation;
+        @extend %h-action;
+        background-color: currentColor;
+        border-radius: 50%;
+        &::before, &::after {
+            background-color: $action__color2;
+        }
+    }
+}
+
+%h-action {
+    color: $action__color-good;
+    font-size: $action__size;
+    width: 1em;
+    height: 1em;
+    transition: color $action__transition ease;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        width: 0.75em;
+        height: 0.15em;
+        margin: auto;
+        transition: transform $action__transition ease;
+    }
+    &::after {
+        transform: rotate(90deg);
+        transition: transform $action__transition ease;
+    }
+}
+
+%h-action-animation {
+    &.is-remove {
+        color: $action__color-bad;
+        transition: color $action__transition ease;
+        &::after {
+            transform: rotate(0deg);
+            transition: transform $action__transition ease;
+        }
+    }
+    &.is-delete {
+        color: $action__color-bad;
+        transition: color $action__transition ease;
+        &:before {
+            transform: rotate(405deg);
+            transition: transform $action__transition ease;
+        }
+        &::after {
+            transform: rotate(495deg);
+            transition: transform $action__transition ease;
+        }
+    }
+}
+
+%u-success {
+    @extend %h-item-icon;
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+    transition: transform $action__transition, color $action__transition;
+    color: $action__color-good;
+    font-size: $action__size;
+    
+    &::after, &::before {
+        content: '';
+        position: absolute;        
+    }
+    &::before {
+        height: 0.6em;
+        box-sizing: border-box;
+        border-left: 0.2em solid currentColor;
+        transition: border $action__transition;
+    }
+    &::after {
+        bottom: 0.4em;
+        left: 0.05em;
+        display: block;
+        width: 1em;
+        height: 0.2em;
+        background-color: currentColor;
+        transition: bottom $action__transition;
+    }
+    &.is-denied {
+        height: 1em;
+        transform: rotate(-405deg);
+        transition: transform $action__transition, color $action__transition;
+        color: $action__color-bad;
+        &::before {
+            width: 100%;
+            height: 100%;
+            border: 0.1em solid currentColor;
+            border-radius: 50%;
+            transition: border $action__transition;
+        }
+        &::after {
+            bottom: 0.4em;
+            width: 0.9em;
+            transition: bottom $action__transition;
+            //transition: all $transition/2;
+        }
+    }
+}

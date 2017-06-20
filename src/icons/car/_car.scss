@@ -1,0 +1,18 @@
+$car__color: $icon-color;
+$car__size: $icon-size;
+%u-car {
+  @extend %h-item-icon;
+  color: $car__color;
+  font-size: $car__size;
+  height: 0.3em;
+  width: 1em;
+  border-radius: 0.5em 0.5em 0 0;
+  background-color: currentColor;
+  &::before, &::after {
+    content: "";
+    display: block;
+  }
+  &:before {
+
+  }
+}

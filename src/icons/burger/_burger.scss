@@ -1,0 +1,61 @@
+$burger__size: $icon-size;
+$burger__color: $icon-color;
+$burger__line-height: 0.2em;
+%u-burger {
+    @extend %h-item-icon;
+    color: $burger__color;
+    font-size: $burger__size;
+    &::before, &::after {
+        @extend %h-burger-line;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    &:before {
+        top: 0;
+        transform: rotate(0deg);
+        transition: top $transition $transition, transform $transition;
+    }
+    &::after {
+        bottom: 0;
+        transform: rotate(0deg);
+        transition: bottom $transition $transition, transform $transition;
+    }
+    &__inner {
+        @extend %h-burger-line;
+        display: block;
+        margin: ((1 - $burger__line-height)/2) 0;
+        opacity: 1;
+        transition: opacity 0s $transition;
+    }
+    //animated transform
+    &.is-over {
+        .u-burger__inner {
+            opacity: 0;
+            transition: opacity 0s $transition;
+        }
+        &::before, &::after {
+
+        }
+        &:before {
+            top: 0.5 - $burger__line-height/2;
+            transform: rotate(45deg);
+            transition: top $transition, transform $transition $transition;
+        }
+        &::after {
+            bottom: 0.5 - $burger__line-height/2;
+            transform: rotate(-45deg);
+            transition: bottom $transition, transform $transition $transition;
+        }
+    }
+}
+
+%h-burger-line {
+    width: 1.5em;
+    height: $burger__line-height;
+    background-color: currentColor;
+    &:not(:first-child) {
+
+    }
+}

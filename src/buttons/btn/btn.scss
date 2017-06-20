@@ -1,4 +1,13 @@
-@import 'h-btn';
-.btn {
-	@extend %h-btn;
+%h-btn {
+    @extend %h-item-btn;
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        border-style: solid;
+        border-width: $btn-height/2;
+        border-color: transparent;
+    }
 }

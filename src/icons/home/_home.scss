@@ -1,0 +1,28 @@
+$home__color: $icon-color;
+$home__size: $icon-size;
+%u-home {
+    @extend %h-item-icon;
+    color: $home__color;
+    font-size: $home__size;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.16em;
+        width: 0;
+        height: 0;
+        border-left: 0.7em solid transparent;
+        border-right: 0.7em solid transparent;
+        border-bottom: 0.55em solid currentColor;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 0.25em;
+        height: 0.45em;
+        margin-top: 0.5em;
+        border-top: 0.35em solid currentColor;
+        border-right: 0.4em solid currentColor;
+        border-left: 0.4em solid currentColor;
+    }
+}

@@ -1,0 +1,52 @@
+$search__color: $icon-color;
+$search__size: $icon-size;
+%u-search {
+  @extend %h-item-icon;
+  font-size: $search__size;
+  color: $search__color;
+  &::before, &::after {
+    content: "";
+    display: block;
+    transition: all $transition;
+  }
+  &::before {
+    border-radius: 60%;
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.5em 0.5em 0;
+    border: currentColor solid 0.25em;
+    background-color: transparent;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+  }
+  &::after {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 1em;
+    height: 0;
+    border-bottom: currentColor 0.25em solid;
+    transform-origin: 0 0;
+    transform: rotate(45deg) translateY(-50%);
+  }
+  &.is-cancel {
+    &::before, &::after {
+
+    }
+    &:before {
+      width: 1em;
+      margin-right: 0.75em;
+      border-left-color: transparent;
+      border-top: none;
+      border-bottom: none;
+      border-radius: 0;
+      transition: all $transition;
+    }
+    &::after {
+      top: 0.45em;
+      left: 0.35em;
+      width: 1.25em;
+      transition: all $transition;
+    }
+  }
+}
